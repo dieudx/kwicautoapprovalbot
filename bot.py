@@ -38,7 +38,7 @@ async def approve(_, m : Message):
         add_group(m.chat.id)
         await app.approve_chat_join_request(op.id, kk.id)
         img = random.choice(gif)
-        await app.send_video(kk.id,img, "**Hello {}!\nWelcome To {}\n\n__Powerd By : @kerala_villas__**".format(m.from_user.mention, m.chat.title))
+        await app.send_video(kk.id,img, "**Hello {}!\nWelcome To {}\n\n__Powerd By : @keralavillas__**".format(m.from_user.mention, m.chat.title))
         add_user(kk.id)
     except errors.PeerIdInvalid as e:
         print("user isn't start bot(means group)")
@@ -55,7 +55,7 @@ async def op(_, m :Message):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🗯 Channel", url="https://t.me/kerala_villas"),
+                        InlineKeyboardButton("🗯 Channel", url="https://t.me/keralavillas"),
                         InlineKeyboardButton("💬 Support", url="https://t.me/keralavilla")
                     ],[
                         InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/autorequestrobot?startgroup")
@@ -97,7 +97,7 @@ async def chk(_, cb : CallbackQuery):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🗯 Channel", url="https://t.me/kerala_villas"),
+                        InlineKeyboardButton("🗯 Channel", url="https://t.me/keralavillas"),
                         InlineKeyboardButton("💬 Support", url="https://t.me/keralavilla")
                     ],[
                         InlineKeyboardButton("➕ Add me to your Chat ➕", url="https://t.me/autorequestrobot?startgroup")
@@ -105,7 +105,7 @@ async def chk(_, cb : CallbackQuery):
                 ]
             )
             add_user(cb.from_user.id)
-            await cb.message.edit("**🦊 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\n__Powerd By : @kerala_villas__**".format(cb.from_user.mention, "https://t.me/Kerala_villas/4"), reply_markup=keyboard, disable_web_page_preview=True)
+            await cb.message.edit("**🦊 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\n__Powerd By : @keralavillas__**".format(cb.from_user.mention, "https://t.me/Kerala_villas/4"), reply_markup=keyboard, disable_web_page_preview=True)
         print(cb.from_user.first_name +" Is started Your Bot!")
     except UserNotParticipant:
         await cb.answer("🙅‍♂️ You are not joined to channel join and try again. 🙅‍♂️")
